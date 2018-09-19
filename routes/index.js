@@ -35,9 +35,9 @@ router.get('/abc', function(req, res){
   res.render('abc');
 });
 
-/*Get try.js*/
-router.get('try', function(req, res){
-  res.render('try');
+/*Get script.js*/
+router.get('script', function(req, res){
+  res.render('script');
 });
 
 
