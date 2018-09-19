@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>yarra agribusiness Website</title>
+ 
+<!-- Use downloaded version of Bootstrap. You can style everything here to your liking. -->
+<!-- Download the Bootstrap source code here
+http://getbootstrap.com/getting-started/ -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+  font-size: 150.5%;
+  font-family: arial, sans-serif;
+}
+
+header{
+  color: grey;
+  font-size: 28px;
+}
+
+#jumbotron
+{
+  padding-top: 0px;
+}
+
+#websiteTitle{
+  font-size: 10em;
+  vertical-align: middle;
+  font-family: 'Pacifico', cursive;
+  padding-left: 15px;
+  color: #191970;
+}
+#websiteSlogan{
+  font-size: 5.4em;
+}
+/* Carousel Styling */
+.slide1{
+  background-image: url('bulb.jpg');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide2{
+  background-image: url('green.jpg');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide3{
+  background-image: url('agri.jpg');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carousel-caption h1{
+  font-size: 5.4em;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: .4em;
+}
+.carousel-caption p{
+  font-size: 2em;
+}
+</style>
+</head>
+<body>
+<!--
+<div class="container">
+  <div class="jumbotron">
+  <img src="ntt-logo.png" id="nttLogo" alt="New Think Tank Logo">
+  <span id="websiteTitle">New Think Tank</span>
+  <p id="websiteSlogan">Video Tutorials on just about Anything</p>
+  </div>
+</div>
+-->
+ 
+<!-- Carousel -->
+<!-- Surround everything with a div with the class carousel slide -->
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+ 
+  <!-- Define how many slides to put in the carousel -->
+  <ol class="carousel-indicators">
+    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+    <li data-target="#theCarousel" data-slide-to="1"> </li>
+    <li data-target ="#theCarousel" data-slide-to="2"> </li>
+  </ol >
+ 
+  <!-- Define the text to place over the image -->
+  <div class="carousel-inner">
+    <div class="item active" >
+    <div class ="slide1"></div>
+    <div class="carousel-caption">
+      <h1>Amazing Environment</h1>
+      <p>Thousands of ways to save it</p>
+      <p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+    </div>
+  </div>
+  <div class="item">
+  <div class="slide2"></div>
+  <div class="carousel-caption">
+    <h1>Thousands of Colors</h1>
+    <p>Every Color you can Imagine</p>
+  </div>
+  </div>
+  <div class="item">
+  <div class="slide3"></div>
+  <div class="carousel-caption">
+  <h1>Amazing </h1>
+  <p></p>
+  </div>
+  </div>
+  </div>
+ 
+  <!-- Set the actions to take when the arrows are clicked -->
+  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"> </span>
+  </a>
+  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+ 
+
+ 
+
+
+<!-- Collapsible Navigation Bar -->
+<div class="container ">
+ 
+<!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+ 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+ 
+      <!-- Button that toggles the navbar on and off on small screens -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+ 
+      <!-- Hides information from screen readers -->
+        <span class="sr-only"></span>
+ 
+        <!-- Draws 3 bars in navbar button when in small mode -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ 
+      <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+     <!-- <a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+    </div>
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="#issues">Issues</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#about">About</a></li>
+         <li><a href="#Contact">Contact Us</a></li>
+      </ul>
+      <!-- navbar-left will move the search to the left -->
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="container text-center row jumbotron col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+  <a name="issues"></a>
+  <header>Issues</header>
+  <div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">
+
+    
+
+    <img src="issues.jpg" class="img-responsive">
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="container text-center row jumbotron col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+   <a name="solution"></a>
+  <header class="font-family-Pacifico">Solutions</header>
+  <div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">
+
+    <img src="solution.gif" class="img-responsive">
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container row jumbotron col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+  <header class="text-center ">About Us</header>
+  <div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">
+
+    <a name="about"></a>
+    <p>We are from team A of yr-agribusiness-simulation project of unit SIT-764, currently studing at Deakin Burwood campus. our team members and faculty details are as follows:
+      <Ul>
+        <li>Alessio Bonti (Unit chair)</li>
+        <li>Wei Luo (Supervisor)</li>
+        <li>Saurav Suman (Team Lead)</li>
+        <li>Malyun Hilowle (Product Owner)</li>
+        <li>Sarabpreet Singh (UI designer)</li>
+        <li>Sneha Talari (Front-End Developer)</li>
+        <li>Ishmeen Chawla (Back-end Developer)</li>
+        <li>Gurjant Singh (Back-end Developer)</li>
+      </Ul>
+    </p>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container row jumbotron col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+  <header class="text-center">Contact Us</header>
+  <div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">
+    <a name="Contact"></a>
+    <form action="#">
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" class="form-control" id="name">
+    
+    <br>
+    <label for="Email">E-mail</label>
+    <input type="text" name="Email" class="form-control" id="Email">
+
+    <br>
+    <label for="Contact">Phone No:</label>
+    <input type="text" name="Contact" class="form-control" id="Contact">
+
+    <br>    
+    <input type="Submit" name="Submit" class="btn btn-default" id="Submit">
+    </form>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

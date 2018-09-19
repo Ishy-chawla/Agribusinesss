@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddNewUser(name="addnewuser", method="post", action="/addnewuser")
+    label(for='name') Name:
+    input#name.form-control(name='name', type='text')
+    br
+    label(for='Email') E-mail
+    input#Email.form-control(name='Email', type='text')
+    br
+    label(for='Contact') Phone No:
+    input#Contact.form-control(name='Contact', type='text')
+    br
+    input#Submit.btn.btn-default(name='Submit', type='Submit')

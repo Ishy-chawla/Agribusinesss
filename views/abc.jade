@@ -1,0 +1,237 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width = device-width, initial-scale = 1')
+    title Bootstrap Tutorial
+    // Use downloaded version of Bootstrap. You can style everything here to your liking.
+    //
+      Download the Bootstrap source code here
+      http://getbootstrap.com/getting-started/
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js")
+    script(src="./script.js")
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    style(type='text/css').
+      body {
+      font-size: 150.5%;
+      font-family: arial, sans-serif;
+      }
+      header{
+      color: grey;
+      font-size: 28px;
+      }
+      #jumbotron
+      {
+      padding-top: 0px;
+      }
+      #websiteTitle{
+      font-size: 10em;
+      vertical-align: middle;
+      font-family: 'Pacifico', cursive;
+      padding-left: 15px;
+      color: #191970;
+      }
+      #websiteSlogan{
+      font-size: 5.4em;
+      }
+      /* Carousel Styling */
+      .slide1{
+      background-image: url('bulb.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .slide2{
+      background-image: url('green.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .slide3{
+      background-image: url('agri.jpg');
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      }
+      .carousel-caption h1{
+      font-size: 5.4em;
+      font-family: 'Pacifico', cursive;
+      padding-bottom: .4em;
+      }
+      .carousel-caption p{
+      font-size: 2em;
+      }
+      .img_size p{
+      height: 350px;
+      max-height: 350px;
+      min-height: 350px;
+      width: 350px;
+      min-width: 350px;
+      max-width: 350px;
+      padding-top: 10px;
+      }
+  body
+    //img.className#IdName(src="http://localhost:3000/images/ntt-logo.png" alt="New Think Tank Logo")
+    //
+      <div class="container">
+      <div class="jumbotron">
+      <img src="ntt-logo.png" id="nttLogo" alt="New Think Tank Logo">
+      <span id="websiteTitle">New Think Tank</span>
+      <p id="websiteSlogan">Video Tutorials on just about Anything</p>
+      </div>
+      </div>
+    // Carousel
+    // Surround everything with a div with the class carousel slide
+    #theCarousel.carousel.slide(data-ride='carousel')
+      // Define how many slides to put in the carousel
+   
+      ol.carousel-indicators
+        li.active(data-target='#theCarousel', data-slide-to='0')  
+        li(data-target='#theCarousel', data-slide-to='1')  
+        li(data-target='#theCarousel', data-slide-to='2')  
+      // Define the text to place over the image
+      .carousel-inner
+        .item.active
+          .slide1
+          .carousel-caption
+            h1 Amazing Environment Newwww
+            p Thousands of ways to save it
+            p
+              a.btn.btn-primary.btn-sm(href='#') Get them Now
+        .item
+          .slide2
+          .carousel-caption
+            h1 Thousands of Colors
+            p Every Color you can Imagine
+        .item
+          .slide3
+          .carousel-caption
+            h1 Food for Thought 
+            p Fills the soul
+      // Set the actions to take when the arrows are clicked
+      
+      a.left.carousel-control(href='#theCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left  
+      a.right.carousel-control(href='#theCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+    // Collapsible Navigation Bar
+    .container
+      // .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen
+     
+      nav.navbar.navbar-default
+        .container-fluid
+          // Brand and toggle get grouped for better mobile display
+          .navbar-header
+            // Button that toggles the navbar on and off on small screens
+     
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              // Hides information from screen readers
+     
+              span.sr-only
+              // Draws 3 bars in navbar button when in small mode
+     
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            // You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar)
+            // <a class="pull-left" href="#"><img src="NTTLogosm.png"></a>
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#')
+                  | Home
+                  span.sr-only (current)
+              li
+                a(href='#issues') Issues
+              li
+                a(href='#solution') Solution
+              li
+                a(href='#about') About
+              li
+                a(href='#Contact') Contact Us
+            // navbar-left will move the search to the left
+      
+            form.navbar-form.navbar-right(role='search')
+              .form-group
+                input.form-control(placeholder='Search', type='text')
+              button.btn.btn-default(type='submit') Submit
+          // /.navbar-collapse
+        // /.container-fluid
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='issues')
+      header Issues
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        img.img-responsive(src="issues.jpg")
+    br
+    br
+    br
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='Stats')
+      header Statistics
+      .col-lg-12.col-lg-offset-0.col-md-12.col-md-offset-0.col-sm-10.col-sm-offset-1
+
+      //Javascript code
+      .wrapper
+        h1
+        h2 Data collected from various sources
+        script(src="script.js")
+        select(id="try" onchange="graph()")
+            option#a(value='1') Please select your value
+            option#b(value='2') Rain and temp
+            option#c(value='3') Population and food
+            option#d(value='4') Weather
+        canvas(id="myChart" width="600" height="400") 
+        script(src="script.js")
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='solution')
+      header.font-family-Pacifico Solutions
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        img.img-responsive(src='solution.gif')
+    br
+    br
+    br
+    .container.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      header.text-center About Us
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        a(name='about')
+        p
+          | We are from team A of yr-agribusiness-simulation project of unit SIT-764, currently studing at Deakin Burwood Campus. Our team members and faculty details are as follows:
+        ul
+          li Alessio Bonti (Unit chair)
+          li Wei Luo (Supervisor)
+          li Saurav Suman (Team Lead)
+          li Malyun Hilowle (Product Owner)
+          li Sarabpreet Singh (UI designer)
+          li Sneha Talari (Front-End Developer)
+          li Ishmeen Chawla (Back-end Developer)
+          li Gurjant Singh (Back-end Developer)
+        p
+    br
+    br
+    br
+    .container.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      header.text-center Contact Us
+      .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
+        a(name='Contact')
+        form#formAddNewUser(name="addnewuser", method="post", action="/addnewuser")
+          label(for='name') Name:
+          input#name.form-control(name='name', type='text')
+          br
+          label(for='Email') E-mail
+          input#Email.form-control(name='Email', type='text')
+          br
+          label(for='Contact') Phone No:
+          input#Contact.form-control(name='Contact', type='text')
+          br
+          input#Submit.btn.btn-default(name='Submit', type='Submit')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
