@@ -12,7 +12,7 @@ var Food = [10709000,10728000,4084000,4441000,4132000,59000];
 
 function graph()
 {
-  var chosen = document.getElementById('try');
+  var chosen = document.getElementById('test');
   if(chosen.value==="2")
       graph1();
   else if(chosen.value==="3")

@@ -203,14 +203,15 @@ header{
   <div class="wrapper">
       <h1></h1>
       <h2>Data collected from various sources</h2>
-  <select>
-  <option value="1" id="a" onclick="javascript:graph1();">Rain and temp</option>
-  <option value="2" id="b" onclick="javascript:graph2();">Population and food</option>
-  </select>
+    <select id="test" onchange="graph()">
+      <option value="1" id="a">Please select your value</option>
+      <option value="2" id="b" >Rain and temp</option>
+      <option value="3" id="c">Population and food</option>
+    </select>
       <canvas id="myChart" width="600" height="400"></canvas>
     </div>
 
-    <script src="try.js"></script>
+    <script src="script.js"></script>
 </div>
 <div>
 

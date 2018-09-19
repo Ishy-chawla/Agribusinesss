@@ -25,10 +25,10 @@ router.get('/userlist', function(req, res) {
   });
 });
 
-/*Get New User Page*/
+/*Get New User Page
 router.get('/try', function(req, res){
   res.render('try', { title: 'Add new user', scripts: ['javascripts/script.js']});
-});
+});*/
 
 /*Get abc page*/
 router.get('/abc', function(req, res){
