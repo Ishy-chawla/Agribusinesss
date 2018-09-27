@@ -21,6 +21,35 @@ MongoClient.connect(db, function (err, db) {
   } else {
     console.log('Connection established to', db);
   }
+/*Post to Add User Service*/
+router.post('/addnewuser', function(req, res) {
+  //Set our internal db variable
+  var db = req.db;
+
+  //Get our form values. These rely on the name attribute
+  var userName = req.body.name;
+  var userEmail = req.body.Email;
+  var userContact = req.body.Contact;
+
+  //Set our collection
+  var collection = db.get('ContactUs');
+
+  //Submit to the db
+  collection.insert({
+    "name": userName,
+    "Email": userEmail,
+    "Contact": userContact
+  }, function(err) {
+    if(err){
+      res.send("There was a problem adding the information to the database.");
+    }
+    else{
+      res.redirect("abc");
+    }
+  });
+
+});
+db.close;
 });
     
 
