@@ -11,6 +11,19 @@ var monk = require('monk');
 //var db = monk('localhost:27017/nodetest1');
 var db = process.env.MONGOLAB_URI;
 
+//We need to work with "MongoClient" interface in order to connect to a mongodb server.
+var MongoClient = mongodb.MongoClient;
+
+// Use connect method to connect to the Server
+MongoClient.connect(db, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    console.log('Connection established to', db);
+  }
+});
+    
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
