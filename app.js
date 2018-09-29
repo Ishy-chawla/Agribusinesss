@@ -5,24 +5,40 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //New Code
-var mongo = require('mongodb');
+var mongodb = require('mongodb');
 var monk = require('monk');
 //var db = process.env.MONGODB_URI || monk('localhost:27017/nodetest1');
 //var db = monk('localhost:27017/nodetest1');
 var db = process.env.MONGOLAB_URI;
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
-var MongoClient = mongodb.MongoClient;
+const MongoClient = require('mongodb').MongoClient;
+const MONGO_URL= 'mongodb://Ish:Ishchawla1@ds115963.mlab.com:15963/nodetest1';
 
 // Use connect method to connect to the Server
-MongoClient.connect(db, function (err, db) {
+MongoClient.connect(MONGO_URL, (err, db) => {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
     console.log('Connection established to', db);
   }
 /*Post to Add User Service*/
-router.post('/addnewuser', function(req, res) {
+db.collection('ContactUs').insertOne(
+  {
+    name: 'Hello',
+    Email: 'hello@g.com',
+    Contact: '234567'
+  },
+  function (err, res) {
+    if (err) {
+      db.close();
+      return console.log(err);
+    }
+    // Success
+    db.close();
+  }
+)
+/*router.post('/addnewuser', function(req, res) {
   //Set our internal db variable
   var db = req.db;
 
@@ -48,8 +64,8 @@ router.post('/addnewuser', function(req, res) {
     }
   });
 
-});
-db.close;
+});*/
+//db.close;
 });
     
 
