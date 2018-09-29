@@ -22,6 +22,18 @@ MongoClient.connect(MONGO_URL, (err, db) => {
   } else {
     console.log('Connection established to', db);
   }
+  router.post('/addnewuser', function(req, res) {
+    //Set our internal db variable
+    var db = req.db;
+  
+    //Get our form values. These rely on the name attribute
+    var userName = req.body.name;
+    var userEmail = req.body.Email;
+    var userContact = req.body.Contact;
+  
+    //Set our collection
+    var collection = db.get('ContactUs');
+  
 /*Post to Add User Service*/
 db.collection('ContactUs').insertOne(
   {
