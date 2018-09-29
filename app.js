@@ -9,22 +9,22 @@ var mongodb = require('mongodb');
 var monk = require('monk');
 //var db = process.env.MONGODB_URI || monk('localhost:27017/nodetest1');
 //var db = monk('localhost:27017/nodetest1');
-var db = process.env.MONGOLAB_URI;
+var mongodb = process.env.MONGOLAB_URI;
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL= 'mongodb://Ish:Ishchawla1@ds115963.mlab.com:15963/nodetest1';
 
 // Use connect method to connect to the Server
-MongoClient.connect(MONGO_URL, (err, db) => {
+MongoClient.connect(MONGO_URL, (err, mongodb) => {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
-    console.log('Connection established to', db);
+    console.log('Connection established to', mongodb);
   }
   router.post('/addnewuser', function(req, res) {
     //Set our internal db variable
-    var db = req.db;
+    var mongodb = req.mongodb;
   
     //Get our form values. These rely on the name attribute
     var userName = req.body.name;
@@ -32,10 +32,10 @@ MongoClient.connect(MONGO_URL, (err, db) => {
     var userContact = req.body.Contact;
   
     //Set our collection
-    var collection = db.get('ContactUs');
+    var collection = mongodb.get('ContactUs');
   
 /*Post to Add User Service*/
-db.collection('ContactUs').insertOne(
+mongodb.collection('ContactUs').insertOne(
   {
     name: 'Hello',
     Email: 'hello@g.com',
@@ -43,11 +43,11 @@ db.collection('ContactUs').insertOne(
   },
   function (err, res) {
     if (err) {
-      db.close();
+      mongodb.close();
       return console.log(err);
     }
     // Success
-    db.close();
+    mongodb.close();
   }
 )
 /*router.post('/addnewuser', function(req, res) {
