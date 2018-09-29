@@ -16,7 +16,7 @@ const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL= 'mongodb://Ish:Ishchawla1@ds115963.mlab.com:15963/nodetest1';
 
 // Use connect method to connect to the Server
-MongoClient.connect(MONGO_URL, (err, mongodb) => {
+MongoClient.connect(MONGO_URL, { useNewUrlParser: true }, (err, mongodb) => {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
